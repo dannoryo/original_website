@@ -58,6 +58,8 @@ document.querySelectorAll('.top-left, .top-right, .bottom-left, .bottom-right').
 });
 
 
+
+
 // script.js
 $('.read-more').on('click', function() {
     // Redirect to another page

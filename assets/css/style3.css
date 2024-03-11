@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+
+  .catchphrase  {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  
+  header {
+    background-image: url('../img/canada-flag.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  @media screen and (max-width: 480px){
+    header {
+      height: 600px;
+      width: 350px;
+  };
+  }
+header h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+body {
+  background-color: black;
+  width: 100%;
+  height:100%;
+}
+section {
+  border: 1px solid rgb(252, 248, 248);
+  width: 95%;
+  margin: 90px auto;
+}
+ #natureIntroduction {
+    background-color: black;
+    color: aliceblue;
+    font-size: 16px;
+    width: 100%;
+    height: 480px;
+    line-height: 2.5;
+    width: 95%;
+  }
+  #natureIntroduction .title h2 {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+  }
+  #natureIntroduction .p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  
+  .catchphrase {
+    text-align: center;
+    color: white;
+  }
+  .first, .second, .third > p{
+    line-height: 2.3;
+  }
+  .first {
+    background-color: #4f4c4c;
+    color: #f1ebeb;
+  }
+  .pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pic>img {
+    width: 900px;
+    height: 500px;
+  }
+   h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2.3;
+  }
+  .second {
+    background-color: #f1ebeb;
+  }
+  .pic-second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pic-second>img {
+    width: 900px;
+    height: 500px;
+  }
+
+  .third {
+    background-color: #4f4c4c;
+    color: #f1ebeb;
+    line-height: 2.3;
+  }
+  .third-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .third-pic>img {
+    width: 900px;
+    height: 500px;
+  }
+  /* footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+  }
+  

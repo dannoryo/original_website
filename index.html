@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <header id="about-me">
+        <div class="header-menu">
+            <p><a href="#about-me">About Me</a></p>
+            <ul>
+                <li><a href="#new-chapter">New Chapter</a></li>
+                <li><a href="#why-canada">Why Canada</a></li>
+                <li><a href="#video">Youtube</a></li>
+            </ul>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./assets/img/alberta.jpg" style="width:100%">
+                <div class="text">"真の北を発見":<br>カナダの活気ある中心で生き、学び、繁栄</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="./assets/img/planenew.jpg" style="width:100%">
+                <div class="text">"カナダを体験":<br>都会の夢から野生の冒険まで</div>
+                
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="./assets/img/lake (1).jpg" style="width:100%">
+                <div class="text">"メープル王国を開放":<br>没入型教育、忘れられない体験</div>
+            </div>
+           
+            <div class="mySlides fade">
+                <img src="./assets/img/buildings.jpg" style="width:100%">
+                <div class="text">"Are you ready???"</div>
+            </div>
+           
+            <!-- ここにさらに画像を追加できます -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div id="particles-js"></div>
+        <div id="wrapper">  
+        <div class="introduction">
+        <h2>Welcome to Canada!</h2>
+        <p>
+            カナダは、北アメリカ大陸に位置し、広大な自然と多様な文化が誇る国です。氷河や滝、雄大な山々、そして青く澄んだ湖がその風景を彩ります。また、都市部では先進的な文化や多様な食文化が息づき、世界中から人々が訪れます。冬にはスキーやスノーボード、夏にはキャンプやトレッキングなど、四季折々に楽しめるアクティビティが豊富です。カナダは多くの人にとって、探検と発見の未知なる地です。そんな素晴らしい国カナダを在住歴一年の私が紹介していきます。</p>
+        </div>
+        </div>
+        <!-- <div class="introduction">
+            <h2>Welcome to Canada!</h2>
+            <p>
+                カナダは、北アメリカ大陸に位置し、広大な自然と多様な文化が誇る国です。氷河や滝、雄大な山々、そして青く澄んだ湖がその風景を彩ります。また、都市部では先進的な文化や多様な食文化が息づき、世界中から人々が訪れます。冬にはスキーやスノーボード、夏にはキャンプやトレッキングなど、四季折々に楽しめるアクティビティが豊富です。カナダは多くの人にとって、探検と発見の未知なる地です。そんな素晴らしい国カナダを在住歴一年の私が紹介していきます。</p>
+        </div> -->
+    </header>
+    <section id="new-chapter">
+        <h2>New Chapter</h2>
+        <div class="top">
+            <div class="top-left">
+                <img src="./assets/img/anima_bear.jpg" alt="">
+                <div class="text-left">Nature</div>
+            </div>
+            <div class="top-right">
+                <img src="./assets/img/woman.jpg" alt="">
+                <div class="text-right">Diversity</div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-left">
+                <img src="./assets/img/anima_city.jpg" alt="">
+                <div class="text-left">Coop Program</div>
+            </div>
+            <div class="bottom-right">
+                <img src="./assets/img/anima_mountain.jpg" alt="">
+                <div class="text-right">Location</div>
+            </div>
+        </div>
+    </section>
+    <section id="why-canada" class="Canada">
+        <h2>Why Canada</h2>
+        <div class="go-pro">
+            <img src="./assets/img/toronto-city.jpg" alt="">
+            <div class="read-more">Read More</div>
+            </div>
+    </section>
+    <section id="video" class="video-section">
+        <h2>YouTube</h2>
+        <div class="video-container">
+            <iframe width="550" height="300" src="https://www.youtube.com/embed/PmBt2S3vL44?si=cOwfuM4yVWbXMsun" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#" class="video-link">旅行を見る</a>
+        </div>
+        <div class="video-container">
+            <iframe width="550" height="300" src="https://www.youtube.com/embed/qDQsVg7uTbQ?si=NCempbprC84G_FEh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#" class="video-link">Co-op留学を見る</a>
+        </div>
+        <div class="video-container">
+            <iframe width="550" height="300" src="https://www.youtube.com/embed/8u77qnzR6aw?si=NO-YoVeneeTqTO71" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <a href="#" class="video-link">仕事の風景を見る</a>
+        </div>
+    </section>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+<footer>
+    <div class="language-switcher">
+        <button class="language-button active" data-lang="ja">日本語</button>
+        <button class="language-button" data-lang="en">English</button>
+    </div>
+    <div class="content">
+        <p class="ja">日本語のフッター内容</p>
+        <p class="en" style="display: none;">Footer content in English</p>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</html>

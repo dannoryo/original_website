@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+/* #particles-js{ 
+	position:fixed;
+	z-index:-1;
+	width: 100%;
+	height: 100%;
+	background-color:#111111;
+} */
+#particles-js {
+position: absolute;
+z-index: -1;
+width: 100%;
+height: 500px;
+background-color:black;
+
+}
+@media screen and (max-width: 480px){
+    #particles-js{
+        height: 730px;
+    };
+    }
+
+
+
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1000; 
+    position: relative;   
+}
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    width: 100%;
+    border-bottom: solid;
+}
+nav, ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media screen and (max-width: 480px){
+    a{
+   font-size: 10px
+    };
+    }
+
+body {
+    background-color: black;
+}
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+/* .mySlides {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 800px; 
+} */
+.mySlides {
+    display: block;
+    height: 100vh;
+}
+
+.mySlides img {
+    /* width: auto; 
+    max-width: 100%; 
+    max-height: 100%; 
+    height: 700px; */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 480px){
+    img {
+    width: 100% ;
+    height: 50%;
+    };
+    }
+.text {
+    font-family: 'Arial', sans-serif; /* フォントをMontserratに変更 */
+    color: #FFFFFF;
+    font-size: 35px; /* テキストの大きさを40pxに変更 */
+    position: absolute;
+    top: 50%; /* 上端を中央に移動 */
+    left: 50%; /* 左端を中央に移動 */
+    transform: translate(-50%, -50%); 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(191, 17, 5, 0.767);   
+}
+@media screen and (max-width: 480px){
+    .text {
+    font-size: 20px;
+    position: absolute;
+    top: 50%; /* 上端を中央に移動 */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-weight: bold;
+    };
+    }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 6s ease;
+    border-radius: 0 3px 3px 0;
+}
+@media screen and (max-width: 480px) {
+    .prev, .next {
+        top: 0;
+        padding: 0;
+        margin-top: 0;
+
+    };
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.introduction {
+    line-height: 3.3;
+}
+
+@media screen and (max-width: 480px) {
+    .introduction {
+        padding: 40px;
+    };
+}
+section {
+    position: relative;
+    background-color:black; /* 背景色を黒色に変更 */
+    padding: 20px; /* 上下の余白を追加 */
+    margin-top: 70px;
+    border: 1px solid rgb(252, 248, 248);
+    width: 95%;
+    margin: 145px auto;
+
+}
+
+@media screen and (max-width: 480px) {
+    section {
+        margin-top: auto;
+        padding: 0;
+    };
+}
+
+h2 {
+    top: 0;
+    left: 0;
+    color: white; /* テキスト色を白色に変更 */
+    font-family: 'Sacramento', cursive;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+@media screen and (max-width: 480px){
+    h2{
+        font-size: 38px;
+    };
+}
+.top, .bottom {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    margin-top: 100px;
+    gap: 55px;
+}
+@media screen and (max-width: 480px) {
+    .top, .bottom {
+        display: flex;
+        justify-content: end;
+        align-items: flex-start;
+        margin-top: 40px;
+
+};
+}
+
+.top img, .bottom img {
+    width: 80%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 70px;
+    margin-bottom: 20px; /* 写真間の下の余白を追加 */
+    /* height: 450px;
+    width: 450px; */
+    object-fit: cover;
+}
+
+@media screen and (max-width: 480px) {
+    .top img, .bottom img {
+        transition: transform 0.3s ease-in-out;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        height: 130px;
+        width: 130px;
+        object-fit: cover;
+
+};
+}
+
+.top-left, .bottom-left {
+    width: 45%;
+    position: relative;
+    margin-left: 100px;
+}
+
+.top-right, .bottom-right {
+    width: 45%;
+    position: relative;
+    margin-top: 100px;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.text-left, .text-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px; /* パディングを増やして強調する */
+    display: none;
+    cursor: pointer; /* マウスを重ねたときにカーソルをポインターに変更する */
+    z-index: 1; /* 他の要素より手前に表示するための設定 */
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .text-left, .text-right {
+        padding: 9px; /* パディングを増やして強調する */
+        z-index: 1; /* 他の要素より手前に表示するための設定 */
+        font-size: 25px;
+    };
+}
+
+.top-left:hover .text-left, .top-right:hover .text-right,
+.bottom-left:hover .text-left, .bottom-right:hover .text-right {
+    display: block;
+}
+
+.top-right {
+    margin-top: 100px;
+}
+
+.bottom-right {
+    margin-top: 100px;
+}
+
+.Canada {
+    background-color:black;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Canada > * {
+    width: 50%;
+}
+.Canada> h2 {
+    font-size: 50px;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .Canada> h2 {
+        font-size: 25px;
+    };
+}
+
+.go-pro{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.go-pro img {
+    width: 100%;
+    object-fit: cover;
+    /* height: 450px; */
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+/* styles.css */
+.read-more {
+    position: absolute;
+    bottom: 40px;
+    right: 150px;
+    background-color:rgba(211, 207, 207, 0.7);
+    color: rgb(45, 43, 43);
+    padding: 5px 10px;
+    font-size: 60px;
+    cursor: pointer;
+    display: none;
+    text-decoration: underline;
+    font-family: 'Sacramento', cursive;
+  }
+  
+  .go-pro {
+    position: relative;
+  }
+  
+  .go-pro:hover .read-more {
+    display: block;
+  }
+
+  .everyone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .everyone>img{
+    width: 80%;
+    height: 650px;
+    border-radius: 300px;
+  }
+
+  .image-container {
+    width: 80%; /* 画像の幅 */
+    height: 70%; /* 画像の高さ */
+    overflow: hidden; /* コンテナ外の画像を隠す */
+  }
+
+  .image-container img {
+    width: 100%; /* 画像の幅を100%に設定 */
+    height: 400px; /* 画像の高さを100%に設定 */
+    object-fit: cover; /* 画像をコンテナにフィットさせる */
+  }
+  
+ /* video-section */
+  .video-section {
+    overflow: hidden; /* フロート解除 */
+    display: grid;
+    justify-content: center;
+    gap: 100px;
+}
+
+.video-container {
+    width: 100%; /* コンテナの幅 */
+    box-sizing: border-box; /* ボックスモデルのボーダーボックスを使用 */
+    float: right; /* 右寄せ */
+}
+
+.video-section >.h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container:nth-child(2n) {
+    float: left; /* 偶数番目の要素を左寄せ */
+}
+
+.video-container:nth-child(3) {
+    clear: both; /* 3番目の要素のフロート解除 */
+}
+
+.video-link {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+@media screen and (max-width: 480px) {
+    .video-container {   
+     width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    };
+}
+@media screen and (max-width: 480px) {
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      };
+}
+@media screen and (max-width: 480px){
+    .video-section {
+        gap: 45px;
+    };
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.language-switcher {
+    margin-bottom: 10px;
+}
+
+.language-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+.language-button.active {
+    font-weight: bold;
+}
+
+.content {
+    font-size: 14px;
+}
+
+/* 日本語 */
+.ja {
+    display: block;
+}
+
+/* 英語 */
+.en {
+    display: none;
+}
+
